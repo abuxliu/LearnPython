@@ -1,0 +1,688 @@
+﻿<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>Python - 互联网编程技术</title>
+	
+	
+	
+	<!-- Bootstrap Core CSS -->
+    <link href="assets/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+	
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+	
+	
+	
+	<!-- jQuery -->
+    <script src="assets/bootstrap-3.3.5-dist/js/jquery.min.js"></script>
+	<script src="assets/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+	
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>
+	
+	<script>document.createElement('section');var duration='900',easing='easeInOutQuint';</script>
+	<script src="assets/js/script.js"></script>
+	
+	<style>
+		html{background-color:#FFFFFF;color:#383838;}
+		::-moz-selection{background:#FFFFFF;color:#4AC4FA;}
+		::selection{background:#FFFFFF;color:#4AC4FA;}
+		#documenter_sidebar #documenter_logo{background-image:url(assets/images/image_1.jpg);}
+		a{color:#018BC8;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #4AC4FA, #018BC8);
+			  background-image: -ms-linear-gradient(top, #4AC4FA, #018BC8);
+			  background-image: -webkit-gradient(linear, 0 0, 0 4AC4FA%, from(#018BC8), to(#018BC8));
+			  background-image: -webkit-linear-gradient(top, #4AC4FA, #018BC8);
+			  background-image: -o-linear-gradient(top, #4AC4FA, #018BC8);
+			  background-image: linear-gradient(top, #4AC4FA, #018BC8);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4AC4FA', endColorstr='#018BC8', GradientType=0);
+			  border-color: #018BC8 #018BC8 #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: #4AC4FA #4AC4FA #bfbfbf;
+		  background-color: #018BC8;
+		}
+		hr{border-top:1px solid #EBEBEB;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{background-color:#018BC8;color:#018BC8;}
+		#documenter_sidebar ul a{-webkit-text-shadow:1px 1px 0px #018BC8;-moz-text-shadow:1px 1px 0px #018BC8;text-shadow:1px 1px 0px #018BC8;}
+		#documenter_sidebar ul{border-top:1px solid #01AAF5;}
+		#documenter_sidebar ul a{border-top:1px solid #018BC8;border-bottom:1px solid #01AAF5;color:#FAFAFA;}
+		#documenter_sidebar ul a:hover{background:#FFFFFF;color:#4AC4FA;border-top:1px solid #FFFFFF;}
+		#documenter_sidebar ul a.current{background:#FFFFFF;color:#4AC4FA;border-top:1px solid #FFFFFF;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+		
+		.title-1{
+			font-size:18px;
+			font-weight:bold;
+		}
+	</style>
+	
+</head>
+<body class="documenter-project-shopme-multipurpose-ecommerce">
+	<div id="documenter_sidebar" style="">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ul id="documenter_nav">
+			<li class="title-1"><a class="current" href="#documenter_cover">Start</a></li>
+				
+			<li><a href="#basic_1">基本原理</a></li>
+			<li><a href="#flask_2">Flask Web 服务</a></li>
+			<li><a href="#jinja2_3" title="CSS Files and Structure">Jinja2 模板引擎</a></li>
+			<li><a href="#Blueprints_4" title="JavaScript Files">Blueprints 模块化设计</a></li>
+			<li><a href="#Sqlite3_5" title="Choose footer, header">Sqlite3 数据库操作</a></li>
+			<li><a href="#bs_jquery_6" title="Choose boxed version">Bootstrap & jQuery 前端设计</a></li>
+			<li><a href="#shopme_7" title="Sliders settings">Shopme 应用案例</a></li>
+			
+		</ul>
+		<div id="documenter_copyright">Copyright mad_velikorodnov 2015<br>
+		made with the <a href="http://rxa.li/documenter">Documenter v2.0</a> 
+		</div>
+	</div>
+	<div id="documenter_content">
+	
+	<!-- 文档主要内容的开始，每个内容都是一个 section -->
+	
+<section id="documenter_cover">
+<!-- 标题部分 -->
+<div>
+<h1>Python - 互联网编程技术</h1>
+<h3>课程内容说明文档。适用专业：电子商务</h3>
+<hr>
+</div>
+
+<!-- 内容部分 -->
+<div class="container" style="width:100%;">
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				前序知识点
+			</h3>
+		</div>
+		<div class="panel-body">
+			<h3>阅读本文档者，需要具备以下几项内容的基础知识：</h3>
+			<h4 style="padding-left:20px;">1、	数据库设计相关知识</h4>
+			<h4 style="padding-left:20px;">2、	Python语言程序开发的基础知识</h4>
+			<h4 style="padding-left:20px;">3、	前端网页设计的基础知识：Html、Javascript、CSS</h4>
+			<h4 style="padding-left:20px;">4、	Bootstrap3 框架与Jquery框架的基础</h4>
+			<h4 style="padding-left:20px;">5、	JSON与Ajax</h4>
+		</div>
+	</div>
+	
+	
+	
+	
+</div>
+</section>
+	
+<section id="basic_1">
+	<div class="page-header">
+		<h1>第一章：基本原理</h1>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				1.1 互联网信息系统设计的基本结构图
+			</h3>
+		</div>
+		<div class="panel-body">
+			<div align="center"><img src="images/1-1.jpg"></div>
+		</div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				1.2 静态资源与动态资源
+			</h3>
+		</div>
+		<div class="panel-body">
+			<h4><strong>URL: </strong>在WWW上，每一信息资源都有统一的且在网上唯一的地址，该地址就叫URL（Uniform Resource Locator,统一资源定位符），它是WWW的统一资源定位标志，就是指网络地址。</h4>
+			<h4><strong>静态资源: </strong>程序运行状态中，不会变化的那些资源，例如：hmtl，js，css，jpg，png等等</h4>
+			<h4><strong>动态资源: </strong>由高级程序语言（Java、.Net、PHP、Python）在程序运行过程中动态生成的那些资源</h4>
+		</div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				1.3 浏览器端页面呈现的工作原理
+			</h3>
+		</div>
+		<div class="panel-body">
+			<h4><strong>浏览器网页内容的渲染: </strong>当浏览器获得一串符合HTML语言规范的字符串时，就会将这个字符串的内容渲染成为用户看到的各种网页效果</h4>
+			<ul style="font-size:18px;">
+				<li>获取静态资源时候，就是将该资源的内容直接传递给浏览器</li>
+				<li>获取动态资源时候，由程序处理后生成这样一串字符串传递给浏览器</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				1.4 HTTP协议的核心流程
+			</h3>
+		</div>
+		<div class="panel-body">
+			<div align="center"><img src="images/1-2.png"></div>
+			<ul style="font-size:18px;">
+				<li>流程的开始，必须由浏览器端发起请求 (request)</li>
+				<li>服务器程序一直处于静默的待命状态</li>
+				<li>接受到客户端的请求之后，服务器执行程序处理(组装Html字符串)，将处理结果返回给客户端 (response)</li>
+			</ul>
+		</div>
+	</div>
+	
+	
+</section>
+<section id="flask_2">
+	<div class="page-header">
+		<h1>第二章：Flask Web 服务器搭建</h1>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				2.1 Flask 简介
+			</h3>
+		</div>
+		<div class="panel-body">
+			<ul style="font-size:18px;">
+				<li>Flask是一个轻量级的可定制框架，使用Python语言编写，较其他同类型框架更为灵活、轻便、安全且容易上手。</li>
+				<li>它可以很好地结合MVC模式进行开发，开发人员分工合作，小型团队在短时间内就可以完成功能丰富的中小型网站或Web服务的实现。</li>
+				<li>Flask还有很强的定制性，用户可以根据自己的需求来添加相应的功能，在保持核心功能简单的同时实现功能的丰富与扩展，其强大的插件库可以让用户实现个性化的网站定制，开发出功能强大的网站。</li>
+				<li>学习网站：<a href="http://docs.jinkan.org/docs/flask/" target="_blank">http://docs.jinkan.org/docs/flask/</a></li>
+				<li>Flask模块在Python中的安装： <strong>pip install Flask</strong></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				2.2 一个最小的Flask应用程序
+			</h3>
+		</div>
+		<div class="panel-body">
+			<div><img src="images/2-1.png"></div>
+			<ul style="font-size:18px;">
+				<li>Flask应用的默认端口号是：5000</li>
+				<li>在浏览器中输入网址：http://localhost:5000/，即可看到返回的字符串</li>
+				
+			</ul>
+		</div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				2.3 开启调试模式与设置运行端口号
+			</h3>
+		</div>
+		<div class="panel-body">
+			<ul style="font-size:18px;">
+				<li>调试模式一般建议开启，这样有任何的程序改动，应用会自动重启和部署</li>
+				<li>程序运行的时候可以指定端口号，以替代默认的5000</li>
+			</ul>
+			<div><img src="images/2-2.png"></div>
+		</div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				2.4 接受客户端传递过来的参数
+			</h3>
+		</div>
+		<div class="panel-body">
+			<ul style="font-size:18px;">
+				<li>动态资源的特点之一，就是可以接受来自于客户端的参数，根据参数的不同进行不同的处理</li>
+				<li>浏览器将用户操作的内容以参数形式传递给服务器，一般有GET和POST两种方式</li>
+				<li>GET方式的参数直接跟在URL后面，以问好 ? 开始，例如：http://localhost:5000/?a=1&b=2</li>
+				<li>POST方式的参数则需要借助于html的表单form，或者ajax方式</li>
+				<li>Flask中接受GET和POST的参数的方式有区别，如下图所示</li>
+				<li>网址：http://localhost:5000/rectarea.do?a=2&b=4</li>
+			</ul>
+			<div><img src="images/2-3.png"><br><img src="images/2-4.png"></div>
+		</div>
+	</div>
+
+</section>
+<section id="jinja2_3">
+	<div class="page-header">
+		<h1>第三章：Jinja2 模板引擎</h1>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				3.1 Jinja2 简介
+			</h3>
+		</div>
+		<div class="panel-body">
+			<ul style="font-size:18px;">
+				<li>Jinja2是基于python的模板引擎，功能比较类似于于PHP的smarty，J2ee的Freemarker和velocity。</li>
+				<li>直接使用python的字符组装html，是相当繁琐的事情，很容易出错，也不利于后续的改动</li>
+				<li>模板的概念，就是在原来的html文件中，挖槽，使用Jinja2将python的数据填入到槽中</li>
+				<li>有了模板引擎，python中只要负责整理好数据结构，传递给模板就可以了</li>
+				<li>Jinja2包和相应的模块，在Flask安装同时已经一并安装了</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				3.2 Flask中配置和使用Jinja2
+			</h3>
+		</div>
+		<div class="panel-body">
+			<h3>在flask中使用Jinja2模板引擎，需要进行以下配置</h3>
+			<ul style="font-size:18px;">
+				<li>配置模板所在的目录</li>
+				<li>配置静态资源所在目录</li>
+				<li>引入 render_template 模板调用方法</li>
+			</ul>
+			<h3>主模块: flask_2.py 中的代码：</h3>
+			<div>
+			<img src="images/3-1.png"><br>
+			<img src="images/3-2.png"><br>
+			<img src="images/3-3.png">
+			</div>
+			<h4>模板文件：test_jinjia2.html 中的代码：</h4>
+			<div>
+			<img src="images/3-4.png">
+			</div>
+		</div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				3.3 Jinja2 的常用语法
+			</h3>
+		</div>
+		<div class="panel-body">
+			<h3>参考网址：<a href="https://www.jianshu.com/p/f04dae701361" target="_blank">https://www.jianshu.com/p/f04dae701361</a></h3>
+			<div>
+			<img src="images/3-5.png"><br>
+			<img src="images/3-6.png"><br>
+			<img src="images/3-7.png"><br>
+			<img src="images/3-8.png"><br>
+			<img src="images/3-9.png"><br>
+			<img src="images/3-10.png"><br>
+			<img src="images/3-11.png"><br>
+			</div>
+		</div>
+	</div>
+	
+	
+</section>
+<section id="Blueprints_4">
+	<div class="page-header">
+		<h1>第四章：Blueprints(蓝图) 模板化设计</h1>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				4.1 Blueprints(蓝图) 简介
+			</h3>
+		</div>
+		<div class="panel-body">
+			<ul style="font-size:18px;">
+				<li>Flask 用 蓝图（blueprints） 的概念来在一个应用中或跨应用制作应用组件和支持通用的模式。</li>
+				<li>假如全部使用app来构造路由器route，会使得app所在的py变得非常的臃肿，后续的维护相当的麻烦</li>
+				<li>蓝图实现了模块化编程设计思想，可以由各个蓝图来构造路由route</li>
+				<li>一般将蓝图构造在不同的URL分级目录下</li>
+				<li>模块化的设计思想，也便于分工合作与代码的维护</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				4.2 Flask中配置和使用蓝图
+			</h3>
+		</div>
+		<div class="panel-body">
+			<h3>在Flask中使用蓝图，需要进行以下配置</h3>
+			<ul style="font-size:18px;">
+				<li>导入Flask中的蓝图对象Blueprint</li>
+				<li>蓝图相关的模块程序代码写在另外的py文件中</li>
+				<li>蓝图中的路由route构造，需要使用蓝图对象，而不是app对象</li>
+				<li>在app对象中注册蓝图对象</li>
+			</ul>
+			<h3>假设一个蓝图，构造在URL前缀或子域名: “/admin” 上</h3>
+			<h3>蓝图模块: bp_admin.py </h3>
+			<div>
+			<img src="images/4-1.png"><br>
+			<img src="images/4-2.png"><br>
+			</div>
+			<h3>主模块: falsk_2.py 中注册蓝图 </h3>
+			<div>
+			<img src="images/4-3.png"><br>
+			<img src="images/4-4.png"><br>
+			</div>
+		</div>
+	</div>
+	
+</section>
+
+<section id="Sqlite3_5">
+	<div class="page-header">
+		<h1>第五章：Sqlite3 数据库操作</h1>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				5.1 Sqlite3 简介
+			</h3>
+		</div>
+		<div class="panel-body">
+			<ul style="font-size:18px;">
+				<li>Python 访问不同的数据库需要安装相应的数据库引擎模块</li>
+				<li>例如：操纵mysql数据库，可以有：MySQLdb PyMysql 等第三方模块的支持</li>
+				<li>SqlAlchemy 是一款非常好的第三方数据库连接引擎，支持各种数据库的连接</li>
+				<li>Sqlite 是一款优秀的轻型数据库产品，面向嵌入式开发，内存型数据库</li>
+				<li>Sqlite 目前常用的版本是3.X，因此通常称之为：Sqlite3</li>
+				<li>Python标准库中包含了操作Sqlite3的模块：sqlite3，可以直接使用</li>
+			</ul>
+			<h3>操作Sqlite3的一般步骤：</h3>
+			<ul style="font-size:18px;">
+				<li>Sqlite3的整个数据库都存在在一个文件中</li>
+				<li>使用 <a href="assets/downloads/DB.Browser.for.SQLite-3.11.1-win32.zip" target="_blank">DB.Browser.for.SQLite</a> 软件创建数据库文件和各个表结构</li>
+				<li>python中使用 sqlite3 模块操作数据库: import sqlite3</li>
+				<li>通过 sql 语句来操作数据库记录</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				5.2 select 查询
+			</h3>
+		</div>
+		<div class="panel-body">
+			<ul style="font-size:18px;">
+				<li>假设数据库文件的路径：./mytest.db</li>
+				<li>其中有一张表: ztest ,结构如下：</li>
+			</ul>
+			<div><img src="images/5-1.png"></div>
+			<h3>进行数据库查询 select 的方法：</h3>
+			<div>
+				<img src="images/5-2.png"><br>
+				<img src="images/5-3.png"><br>
+				<img src="images/5-4.png"><br>
+			</div>
+		</div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				5.2 insert 新增
+			</h3>
+		</div>
+		<div class="panel-body">
+			<div>
+				<img src="images/5-5.png"><br>
+			</div>
+		</div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				5.3 update 修改
+			</h3>
+		</div>
+		<div class="panel-body">
+			<div>
+				<img src="images/5-6.png"><br>
+			</div>
+		</div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				5.4 delete 删除
+			</h3>
+		</div>
+		<div class="panel-body">
+			<div>
+				<img src="images/5-7.png"><br>
+			</div>
+		</div>
+	</div>
+	
+</section>
+
+
+<section id="bs_jquery_6">
+	<div class="page-header">
+		<h1>第六章：Bootstrap & jQuery 前端设计</h1>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				6.1 Bootstrap 简介
+			</h3>
+		</div>
+		<div class="panel-body">
+			<ul style="font-size:18px;">
+				<li>Bootstrap 是一套前端Web开发的框架</li>
+				<li>由美国Twitter公司的设计师Mark Otto和Jacob Thornton合作设计</li>
+				<li>基于HTML、CSS、JavaScript，具有简洁、直观、强悍的特点</li>
+				<li>现有的很多Web框架都是基于 Bootstrap 的二次开发</li>
+				<li>参考网址：https://www.runoob.com/bootstrap/bootstrap-tutorial.html</li>
+				<li>参考网址：https://www.bootcss.com/</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				6.2 jQuery 简介
+			</h3>
+		</div>
+		<div class="panel-body">
+			<ul style="font-size:18px;">
+				<li>jQuery是一个快速、简洁的JavaScript框架</li>
+				<li>jQuery设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情</li>
+				<li>封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式</li>
+				<li>优化HTML文档操作、事件处理、动画设计和Ajax交互</li>
+				<li>参考网址：https://www.runoob.com/jquery/jquery-tutorial.html</li>
+				<li>参考网址：https://jquery.com/</li>
+			</ul>
+		</div>
+	</div>
+	
+</section>
+
+
+<section id="shopme_7">
+	<div class="page-header">
+		<h1>第七章：Shopme 应用案例</h1>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				7.1 Shopme 文件结构说明
+			</h3>
+		</div>
+		<div class="panel-body">
+			<h3>整个 Shopme 应用案例 均放置在 ECDemo 文件夹中，结构目录如下：</h3>
+			<div>
+				<img src="images/7-1.png"><br>
+				<img src="images/7-2.png"><br>
+				<img src="images/7-3.png"><br>
+			</div>
+		</div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				7.2 Python 工具包 project_utils.py 的常用函数说明
+			</h3>
+		</div>
+		<div class="panel-body">
+		
+		<table class="table table-striped" style="font-size:18px;">
+		  <thead>
+			<tr>
+			  <th width="30%">函数名</th>
+			  <th><center>说明</center></th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<tr>
+			  <td>引入模块</td>
+			  <td><img src="images/7-4.png"></td>
+			</tr>
+			<tr>
+			  <td>to_json</td>
+			  <td><img src="images/7-5.png"></td>
+			</tr>
+			<tr>
+			  <td>datestr_to_timestamp</td>
+			  <td><img src="images/7-6.png"></td>
+			</tr>
+			<tr>
+			  <td>timestamp_to_datestr</td>
+			  <td><img src="images/7-7.png"></td>
+			</tr>
+			<tr>
+			  <td>now_timestamp</td>
+			  <td><img src="images/7-8.png"></td>
+			</tr>
+			<tr>
+			  <td>md5_encode</td>
+			  <td><img src="images/7-9.png"></td>
+			</tr>
+			<tr>
+			  <td>base64_encode</td>
+			  <td><img src="images/7-10.png"></td>
+			</tr>
+			<tr>
+			  <td>base64_decode</td>
+			  <td><img src="images/7-11.png"></td>
+			</tr>
+			<tr>
+			  <td>gnr_check_code</td>
+			  <td><img src="images/7-12.png"></td>
+			</tr>
+			<tr>
+			  <td>get_project_dir</td>
+			  <td><img src="images/7-13.png"></td>
+			</tr>
+			
+		  </tbody>
+		</table>
+
+		</div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				7.3 JavaScript 工具包 iceking-utils-jquery.js 的常用函数说明
+			</h3>
+		</div>
+		<div class="panel-body">
+		
+		<table class="table table-striped" style="font-size:18px;">
+		  <thead>
+			<tr>
+			  <th width="30%">函数名</th>
+			  <th><center>说明</center></th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<tr>
+			  <td>引入脚本</td>
+			  <td><img src="images/7-14.png"></td>
+			</tr>
+			<tr>
+			  <td>表单</td>
+			  <td><img src="images/7-14-1.png"></td>
+			</tr>
+			<tr>
+			  <td>formData</td>
+			  <td><img src="images/7-15.png"></td>
+			</tr>
+			<tr>
+			  <td>formItem</td>
+			  <td><img src="images/7-16.png"></td>
+			</tr>
+			<tr>
+			  <td>formVal</td>
+			  <td><img src="images/7-17.png"></td>
+			</tr>
+			<tr>
+			  <td>formInt</td>
+			  <td><img src="images/7-18.png"></td>
+			</tr>
+			<tr>
+			  <td>formLoad</td>
+			  <td><img src="images/7-19.png"></td>
+			</tr>
+			<tr>
+			  <td>obj2json</td>
+			  <td><img src="images/7-20.png"></td>
+			</tr>
+			<tr>
+			  <td>hasAttr</td>
+			  <td><img src="images/7-21.png"></td>
+			</tr>
+			<tr>
+			  <td>inArray</td>
+			  <td><img src="images/7-22.png"></td>
+			</tr>
+			<tr>
+			  <td>loadHtml</td>
+			  <td><img src="images/7-23.png"></td>
+			</tr>
+			<tr>
+			  <td>loadJson</td>
+			  <td><img src="images/7-24.png"></td>
+			</tr>
+			<tr>
+			  <td>loadJs</td>
+			  <td><img src="images/7-25.png"></td>
+			</tr>
+		  </tbody>
+		</table>
+
+		</div>
+	</div>
+	
+</section>
+
+
+
+	</div>
+</body>
+</html>
